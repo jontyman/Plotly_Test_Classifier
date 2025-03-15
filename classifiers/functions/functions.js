@@ -1,0 +1,1 @@
+export {MajorityClass} from './MajorityClass.js';

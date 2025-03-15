@@ -1,0 +1,6 @@
+pseudocode
+
+weight
+instancedata
+instance header (model context)
+randomseedoption (learners)
