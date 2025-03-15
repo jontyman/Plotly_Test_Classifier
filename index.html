@@ -2,11 +2,33 @@
 
 <head>
 <script type="module" src="hello.js"></script>
+<link rel="stylesheet" type="text/css" href="css/app.css">
+
 
 <!--<script type="module" src="hello_Java_to_JS_ChatGPT.js"></script>-->
 </head>
 
 <body>
-<div id="tester"></div>
+<div class="background">
+
+	<div class="titleBanner">
+		<div style="display:flex;">
+			<div style="flex:1; align: center;">
+				<h1 class="mainHeading">Plotly</h1>
+			</div>
+		</div>
+	</div>
+
+	<div class="button-Container">
+		<button id="pauseButton" class="apple-button" >Pause/Resume</button>
+		<button id="startButton" class="apple-button" >Start function ▶</button>
+	</div>
+	
+	<!--<div id="graph-container">
+		<canvas id="tester"></canvas>
+	</div>-->
+	<div id="tester"></div>
+	
+</div>
 
 </body>

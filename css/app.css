@@ -1,0 +1,382 @@
+html,body{
+	margin:0;
+	height:100%;
+}
+
+body{
+	min-height:100%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+.background{
+	/*background: rgb(2,0,36);*/
+	background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(34,72,112,1) 41%, rgba(42,68,148,1) 58%, rgba(78,165,217,1) 80%, rgba(68,207,203,1) 100%); /* Circular colour with blue and black 20 May */
+	height:100%;
+	width:100%;
+	z-index:4;
+}
+
+.titleBanner {
+	background: linear-gradient(to right, rgba(18,44,52,1), rgba(18,51,51,1)); /*Dark Green Used for 20 May*/	
+	color: #fff; 
+	/*padding: 10px 20px;*/ /* vertical and horizontal*/
+	text-align: center; 
+	font-size: 18px; 
+	font-weight: bold; 
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+	border-radius: 4px; 
+	transition: all 0.3s ease;
+	margin-bottom: 10px;
+	/*margin-top: 30px;*/
+	z-index: 8;
+}
+
+.mainHeading{
+	font-size: 3em;
+	font-weight: bold;
+	flex:1;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+.functionSelect{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold; 
+	background-color: white; 
+	display: inline-block;
+	margin-left: 15px;
+	
+}
+
+.secondHeading-Container {
+	/*background-color: #224870; */
+	display: inline-block;
+	margin-top: 7px;
+	margin-left: 15px;
+	
+}
+
+.secondaryHeading {
+	font-family: "Open Sans", sans-serif;
+	/*color: white;*/
+	color: #224870;
+	padding-left: 5px;
+	padding-right: 5px;
+
+
+}
+
+.optionForm() {
+	padding: 20px 40px;
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
+    max-width: 400px;
+}
+
+.optionList {
+	font-family: "Open Sans", sans-serif;
+	/*background: linear-gradient(to right, #f5f5f5, #dddddd);*/
+	/*background: linear-gradient(to right, #44CFCB, #4EA5D9);*/
+	/*background: white;*/
+	
+	background-color: rgba(255,255,255,0.9); /*Used when no form*/
+	box-shadow: 0 4px 6px rgba(0,0,0,0.1); /*Used when no form*/
+	margin-bottom: 20px;
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-top: 7px;
+	padding-top: 5px;
+	padding-left: 5px;
+	border-radius: 4px;
+	/*Addition changes for form */
+	/*z-index:9;
+	position:fixed;
+	top:100px;
+	overflow: auto;
+	background-color: rgba(255,255,255,0.97);*/
+
+
+}
+
+.customLabel{
+	margin-right: 10px;	
+}
+
+.classOption-Container {
+	/*border-top: 7px dashed #fdfdfd;*/
+	border-top: 7px dashed #dcdcdc;
+	margin-top: 5px;	
+}
+
+
+/* Apple-style button */
+.apple-button {
+    display: inline-block;
+    padding: 10px 20px;
+	font-family: 'Roboto Condensed', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+	background-color: #224870;
+    /*background-color: #0070c9;*/ /* Apple's default blue color */
+    /*color: #fff;*/
+	color:#D9D9D9;
+	border: 2px solid #D9D9D9;
+    /*border: 2px solid #0070c9;*/ /* Border color matches background initially */
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.apple-button:hover {
+    background-color: #005499; /* Darker blue on hover */
+    border-color: #005499;
+}
+
+/* Apple-style radio button */
+.apple-radio {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.apple-radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.apple-radio-label {
+    position: relative;
+    padding-left: 30px; /* Adjust the spacing between the radio button and label */
+    cursor: pointer;
+    display: inline-block;
+    line-height: 20px; /* Adjust the line height as needed */
+}
+
+.apple-radio-checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px; /* Size of the radio button */
+    width: 20px; /* Size of the radio button */
+    background-color: #fff; /* Background color of the radio button */
+    border: 2px solid #0070c9; /* Border color of the radio button */
+    border-radius: 50%; /* Make it a circle */
+}
+
+/* Style the radio button when checked */
+.apple-radio input:checked + .apple-radio-label .apple-radio-checkmark {
+    background-color: #0070c9; /* Background color when checked */
+    border-color: #0070c9; /* Border color when checked */
+}
+
+/* Hide the default browser styles */
+.apple-radio input:checked + .apple-radio-label:before {
+    content: none;
+}
+
+.button-Container {
+	margin-left:15px;
+}
+
+.numSpan {
+min-width: 100px;
+display: inline-block;
+}
+
+.flagSpan {
+min-width: 195px;
+display: inline-block;	
+}
+
+/* Container styling */
+.select-container {
+  position: relative;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  box-sizing:border-box;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  outline: 2px solid transparent; /* Slight outline */
+
+}
+
+/* Select element styling */
+.select-container select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  /*border:2px solid #dddddd;*/
+  outline: none;
+  /*background: transparent;*/
+  background:#f5f5f5;
+}
+
+/* Arrow icon styling */
+.select-container::after {
+  content: '\25BC'; /* Unicode character for down arrow */
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #333; /* Arrow color */
+  transition: transform 0.3s ease;
+}
+
+/* Arrow icon rotation on focus */
+.select-container:focus-within::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+/* Border and shadow on focus */
+.select-container:focus-within {
+  box-shadow: 0 0 0 2px #3498db; /* Blue border */
+}
+
+/* Hover effect */
+.select-container:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Options styling */
+.select-container select option {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Option hover effect */
+.select-container select option:hover {
+  background-color: #f4f4f4;
+}
+
+
+#graph-container {
+	/*background-color: white;*/
+	width: 97%;
+	margin: 0 auto 10px auto;
+}
+
+#tester {
+	/*background-color: white;*/
+	/*padding: 10px 0px 10px 0px;*/
+	width: 97%;
+	justify-content: center;
+	margin: 10px auto 10px auto;*/
+}
+
+#myChart {
+	background-color: white;
+	z-index: 10; 
+	display:none;
+}
+
+
+/* Style the table */
+.table-container {
+  /*width: 100%;*/
+  width:95%;
+  border-collapse: collapse;
+  /*font-family: Arial, sans-serif;*/
+  font-family: "Open Sans", sans-serif;
+  margin: 0 auto 20px auto;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+
+}
+
+/* Style the table header */
+.table-container th {
+  /*background-color: #f2f2f2;*/
+  /*background-color: #01987A;*/
+  /*background-color: #55608F;*/ /* faded purple*/
+  background-color: #224870; /* faded purple*/
+
+  color: #f2f2f2;
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+/* Style the table rows */
+.table-container tr {
+  border: 1px solid #ddd;
+  background-color: white;
+
+}
+
+/* Style the table data cells */
+.table-container td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+/* Style alternate rows for better readability */
+.table-container tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Style when table cell is hovered */
+.table-container td:hover {
+  background-color: #e6e6e6;
+  /*color: green;*/
+}
+
+/* Modern number input style */
+  input[type="number"] {
+    width: 100px;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+	margin-bottom: 5px;
+    transition: border-color 0.3s ease;
+    outline: none;
+  }
+
+  /* Number input hover effect */
+  input[type="number"]:hover {
+    border-color: #aaa;
+  }
+
+  /* Number input focus effect */
+  input[type="number"]:focus {
+    border-color: #3498db;
+  }
+  
+  /* Modern checkbox input style */
+  input[type="checkbox"] {
+    width: 100px;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+	margin-bottom: 7px;
+    transition: border-color 0.3s ease;
+    outline: none;
+	transform: scale(1.2);
+  }
+  
+  /* Checkbox input hover effect */
+  input[type="checkbox"]:hover::before {
+    border-color: #aaa;
+	border-radius: 50%;
+  }
+  
+  /* Checkbox input focus effect */
+  input[type="checkbox"]:focus {
+    border-color: #3498db;
+  }
+
+
+

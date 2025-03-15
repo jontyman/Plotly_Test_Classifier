@@ -5,12 +5,14 @@ import Instance from "./Instance-manual.js";
 
 //import MajorityClass from './classifiers/functions/MajorityClass-Copy.js'
 //import * as functions from './classifiers/functions/functions.js';
+var isPaused=false;
+var startPressed=false;
 
-
-function runClassifier(sampfreq, instanceLimit){
+async function runClassifier(sampfreq, instanceLimit){
 	const Date1 = new Date();
 	var time1 = Date.now();
 	console.log ("Time 1 is:" + time1);
+	isPaused=false;
 
 	//var a = new classifiers.MajorityClass();
 	
@@ -29,7 +31,8 @@ function runClassifier(sampfreq, instanceLimit){
 
 	var numberSamplesCorrect=0;
 	var numberSamples=0;
-	var numInstances=1000000;
+	var numInstances=10000000;
+	//1000000
 
 	if(instanceLimit<numInstances){
 		numInstances=instanceLimit;
@@ -74,7 +77,7 @@ function runClassifier(sampfreq, instanceLimit){
 	*/
 
 	var config = {responsive: true};
-
+	//document.getElementById(tester).style.display='Reset';
 	Plotly.newPlot('tester', [trace1copy], layout, config );
 
 	for (let i= 0; i< numInstances; i++){
@@ -110,10 +113,19 @@ function runClassifier(sampfreq, instanceLimit){
 				
 				//var data2 = [trace1copy];			
 				//data[0].y.push(accuracy);
-				setTimeout(function(){
+				
+				//Plotly.update('tester', [trace1copy], layout, config );
+				updateGraph('tester',[trace1copy],layout,config)
+				//Plotly.extendTraces('tester',{ x: [[i+1]], y: [[accuracy]] }, [0]); //Works
+				 await new Promise(resolve => setTimeout(resolve, 50)); 
+				
+				/*setTimeout(function(){
 						console.log("Entered timeout");
 					Plotly.update('tester', [this.tracelcopy], layout, config );
-				},0);
+				},500);
+				*/
+				
+
 				counter=0;
 				
 			}
@@ -150,6 +162,31 @@ function runClassifier(sampfreq, instanceLimit){
 
 }
 
-runClassifier(10000);
+function updateGraph(tester, trace, layout, config ){
+	if(!isPaused){
+		Plotly.update(tester, trace, layout, config );
+	}
+	
+}
+
+function pauseGraph() {
+	isPaused = !isPaused; 
+	console.log("Pressed");
+}
+
+function resetClassifier(){
+	if(startPressed){
+		
+	}
+}
+
+
+
+document.getElementById('startButton').addEventListener('click', () => runClassifier(10000));
+document.getElementById('pauseButton').addEventListener('click', () => pauseGraph());
+
+
+
+//runClassifier(10000);
 
 //console.log("Total time is: " + diffTime + " seconds");
